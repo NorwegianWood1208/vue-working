@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="root">
+			<!--任意组件间的通信调度
+				1、创造一个中间调度器      var events =  new Vue()
+				2、给要传的组件加一个事件，当事件触发的时候在调度器的构造函数上添加事件和数据
+					methods:{
+						click(){
+							events.$emit('事件',数据)
+						}
+					}
+				3、在要接收的组件身上加一个生命周期的钩子函数
+					mounted:function(){
+						、
+					}
+				4、在钩子函数下面给中间调度器的构造函数上添加一个方法
+					events.$on('自定义事件',function(形参){
+						接收组件的数据 = 形参（传递组件的数据）
+					})
+					
+				5、这个时候钩子函数下的this指向已经发生了变化：
+					在调度器触发这个回调函数之前
+					var oun = this
+					把this存起来
+			-->
+			<huahua></huahua>
+			<xiaohua></xiaohua>
+		</div>
+		<script src="../vue.js"></script>
+		<script src="tongji.js"></script>
+	</body>
+</html>
