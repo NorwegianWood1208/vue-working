@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <ul id="root">
+        <ul>
+            <li v-for="key,val in arr">{{val}}</li>
+        </ul>
+        <ul>
+            <li v-for="val,key in obj">{{val}}</li>
+        </ul>
+    </div>
+    <script>
+    let v = new Vue({
+        el:'#root',
+        data:{
+            arr:[],
+            obj:{
+                name:'huahua',
+                age:'14'
+            }
+        }
+    }) 
+    setTimeout(function(){
+        v.arr = [1,2,3]
+    },2000)
+    </script>
+</body>
+</html>

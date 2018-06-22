@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="demo1">
+			<ppa></ppa>
+		</div>
+		<div id="demo2">
+			<ppa></ppa>
+		</div>
+		<!--组件化开发
+			1、直接Vue.component('组件名'，{
+						template:'结构'，
+						methods：{
+							方法
+						}
+			})
+				然后在全局组件上引入<ppa></ppa>
+			2、全局定义一个组件
+				var 组件名 = {
+					template:'结构'，
+					methods：{
+						方法
+					}
+				}
+				把组件放在挂载点下面的components下面
+				//new Vue({
+				//	el:'#demo2'，
+					components:{
+						组件名
+					}
+				//})
+				然后在全局组件上引入<ppa></ppa>
+			3、直接在挂载点的components下面定义挂载点
+					components:{
+						组件名:{
+							template:'结构',
+							methods:{
+								方法
+							}
+						}
+					}
+				然后在全局组件上引入<ppa></ppa>
+			1、//Vue.component('ppa',{
+				//	template:'<button @click="click">搞我</button>',
+				//	methods:{
+				//		click(){
+				//			alert('我执行了')
+				//		}
+				//	}
+				//})
+				-->
+		<!--2、//var ppa = {
+			//	template:'<button @click="click">搞我</button>',
+			//	methods:{
+			//		click(){
+			//			alert('我执行了')
+			//		}
+			//	}
+			//}-->
+		<!--3、components:{
+				ppa:{
+					template:'<button @click="click">搞我</button>',
+					methods:{
+						click(){
+							alert('我执行了')
+						}
+					}
+				}
+		}-->
+		<script src="../../vue.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>

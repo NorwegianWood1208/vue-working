@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			<ul>
+				<li v-for="value in applist">{{value.name}}  期望值  {{value.price}}  实际表现  {{value.price*value.discount}}</li>
+			</ul>
+		</div>
+		<script src="../vue.js"></script>
+		<script type="text/javascript">
+			new Vue({
+				el:'#app',
+				data:{
+					applist:{
+						german:{
+							name:'德国',
+							price:9,
+							discount:.7
+						},
+						basi:{
+							name:'巴西',
+							price:8.5,
+							discount:.8
+						},
+						spaner:{
+							name:'西班牙',
+							price:8,
+							discount:.9
+						}
+					}
+				}
+			})
+		</script>
+		
+	</body>
+</html>

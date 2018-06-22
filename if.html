@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <div v-if="val1">吴建运</div>
+        <div v-else>刘翼萱</div>
+        <div v-if="color === 'red'">red</div>
+        <div v-else-if="color === 'yellow'">yellow</div>
+        <div v-else="color === 'green'">green</div>
+    </div>
+    <script>
+        new Vue({
+            el:'#root',
+            data:{
+                val1:false,
+                color:'yellow'
+            }
+        })
+    </script>
+</body>
+</html>

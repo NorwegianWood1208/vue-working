@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		.active{
+			background-color: #010;
+		}
+	</style>
+	<body>
+		<div id="app">
+			<div class="">
+				<a  :class="{active:isactive}" v-bind:href="url">搞我</a>
+				<!--<img :src="imgh"/>-->
+			</div>
+		</div>
+		<script src="../vue.js">
+			
+		</script>
+		<script type="text/javascript">
+			let app =new Vue({
+				el:'#app',
+				data:{
+					url:'http://baidu.com',
+					imgh:'https://b-ssl.duitang.com/uploads/item/201411/07/20141107014743_FKCKR.jpeg',
+					isactive:true
+				}
+			})
+		</script>
+	</body>
+</html>

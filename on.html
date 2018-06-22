@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <ul id="root">
+        <button @keyup.13="click">按钮</button>
+        <ul>
+            <li v-for="key,val in arr">{{val}}</li>
+        </ul>
+    </div>
+    <script>
+    let v = new Vue({
+        el:'#root',
+        data:{
+            arr:[],
+            num:0
+        },
+        methods:{
+            click(){
+                let {num,arr} = this;
+                num++;
+                arr.push(num)
+            }
+        }
+    }) 
+    </script>
+</body>
+</html>

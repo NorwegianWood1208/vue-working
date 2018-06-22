@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			<div>
+				<input type="text" v-model="name"/>
+				<p>{{name}}</p>
+			</div>
+			<div>
+				<input type="text" v-model="age"/>
+				<p>{{age}}</p>
+			</div>
+			<div>
+				<input type="text" v-model="sex"/>
+				<p>{{sex}}</p>
+			</div>
+		</div>
+		
+		<script src="../vue.js"></script>
+		<script type="text/javascript">
+			new Vue({
+				el:'#app',
+				data:{
+					name:null,
+					age:null,
+					sex:null
+				}
+			})
+		</script>
+	</body>
+</html>

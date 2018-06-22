@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        {{val}}
+        <ul>
+            <li v-for="val,key in arr">
+                {{key+':'+val}}
+            </li>
+            <input type="text" v-model="val2">
+            <p>{{val2}}</p>  
+        </ul>
+    </div>
+    <script>
+        new Vue({
+            el:'#root',
+            data:{
+                val:'hello,world!',
+                arr:[1,2,3,4],
+                val2:'上天台'
+            }
+        })
+    </script>
+</body>
+</html>

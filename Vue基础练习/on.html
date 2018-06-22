@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			<div v-on={mouseenter:onenter,mouseleave:onleave} @click="click">
+				搞我
+			</div><br />
+			<form @submit.prevent="onsm">
+				<input @keyup.13="keyup" type="text"/>
+				<input type="button"  value="狗子" />
+			</form>
+		</div>
+		<script src="../vue.js">
+			
+		</script>
+		<script type="text/javascript">
+			new Vue({
+				el:'#app',
+				methods:{
+					click:function(){
+						console.log('aaa')
+					},
+					onenter:function(){
+						console.log('bbb')
+					},
+					onleave:function(){
+						console.log('ccc')
+					},
+					onsm:function(){
+						console.log('111')
+					},
+					keyup:function(){
+						console.log('按键了')
+					},
+				}
+			})
+		</script>
+	</body>
+</html>

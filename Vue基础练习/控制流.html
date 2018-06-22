@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			<div v-if="role == 'admin'">
+				管理员你好
+			</div>
+			<div v-else-if="role == 'hr'">
+				你好爸爸！
+			</div>
+			<div v-else>
+				拱开！！
+			</div>
+		</div>
+		<script src="../vue.js"></script>
+		<script type="text/javascript">
+			new Vue({
+				el:'#app',
+				data:{
+					role:'hr'
+				},
+				methods:{
+					
+				},
+				computed:{
+					
+				}
+			})
+		</script>
+	</body>
+</html>
