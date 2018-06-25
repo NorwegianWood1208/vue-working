@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="root">
+			<!--生命周期函数就是vue实例在某一个时间点会自动执行的函数
+				
+				beforeCreate：在页面初始化和事件初始化的之后，实例创造完之前会执行
+				
+				create：实例创建完成以后
+				
+				会询问页面中是否有el元素。
+				
+				接下来会询问是否有template。
+				如果与就会用模板去渲染。如果没有就会用el对应的HTML去当模板
+				
+				beforeMount：在创造模板完成之前
+				
+				mounted：页面挂载完成之后
+				
+				beforeDestroy:当组件元素即将被销毁的时候
+				
+				destroy：当组件元素已经被销毁了以后
+				
+				beforeUpdate:当数据发生变化之后，页面重新渲染之前
+				
+				update:当数据发生变化之后，页面重新渲染之后
+			-->
+			{{text}}
+		</div>
+		<script src="../vue.js"></script>
+		<script type="text/javascript" src="index.js" ></script>
+	</body>
+</html>
