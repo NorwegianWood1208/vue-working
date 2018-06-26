@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		.active{
+			color: red;
+		}
+	</style>
+	<body>
+		<div id="root">
+			<!--<div @click="changecolor" :class="{active : isactive}">你好！王花花</div>-->
+			<!--<div @click="changecolor" :class="[actived]">你好！王花花</div>-->
+			<div @click="changecolor" :style="[styleobj,{fontSize:'20px'}]">你好！王花花</div>
+		</div>
+		<!--
+			样式数据绑定：
+				1、class对象绑定。通过class和对象对数据进行绑定。
+				2、class数组绑定。通过class和数据绑定对数据进行操作
+				3、样式和数据相绑定。通过数据变化改变样式
+		-->
+		<script type="text/javascript" src="../vue.js" ></script>
+		<script src="index.js"></script>
+	</body>
+</html>

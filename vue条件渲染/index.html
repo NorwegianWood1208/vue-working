@@ -6,13 +6,8 @@
 	</head>
 	<body>
 		<div id="root">
-			{{fullname}}
-			<!--
-				computed下面的get和set方法：
-					get：可以用来做常规的计算属性来用
-					set：可以用来获得一个参数，用来做重新计算
-				
-			-->
+			<div v-if="show">我爱王花花</div>
+			<div v-else>我不爱王花花</div>
 		</div>
 		<script type="text/javascript" src="../vue.js" ></script>
 		<script src="index.js"></script>
