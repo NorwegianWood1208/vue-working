@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="root">
+			<!--<table>
+				<tbody>
+					<tr is="row"></row>
+					<tr is="row"></row>
+					<tr is="row"></row>
+				</tbody>
+				遇到表格、opation、li都可以用is属性
+			</table>-->
+			<counter ref="one" @handnum="numadd"></counter>
+			<counter ref="two" @handnum="numadd"></counter>
+			<div>{{all}}</div>
+		</div>
+		<script type="text/javascript" src="../vue.js" ></script>
+		<script src="index.js"></script>
+	</body>
+</html>

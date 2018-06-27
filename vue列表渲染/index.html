@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="root">
+			<ul>
+				<!--
+					数据驱动视图（遍历数组）
+						1、利用vue提供的七种变异方法
+						2、改变数据的引用地址
+						3、set方法  Vue.set(root.userinfo,4,5)或者 root.$set(root.userinfo,4,5)
+					数据驱动视图（遍历对象）
+						1、修改对象内容可以直接改
+						2、添加对象内容必须更改引用地址
+						3、set方法  Vue.set(root.userinfo,4,5)或者 root.$set(root.userinfo,4,5)
+				-->
+				<li v-for="(value) in userinfo"
+					:key="value.id"
+				>
+					{{value}}
+					
+				</li>
+				<button @click="add">按钮</button>
+			</ul>
+		</div>
+		<script src="../vue.js"></script>
+		<script src="index.js"></script>
+	</body>
+</html>
