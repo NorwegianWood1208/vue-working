@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../vue.js" ></script>
+	<script src="velocity.js"></script>
+	<body>
+		<div id="root">
+			<transition
+				@before-enter="beforenter"
+				@enter = "enter"
+				@after-enter = "afterenter"
+			>
+				<div 
+					v-show="show"
+				>
+					wanghuahua
+				</div>
+				
+			</transition>
+			<button @click="showsome">点我</button>
+		</div>
+		
+		<script src="velocity.js"></script>
+		<script>
+			let root = new Vue({
+				el:'#root',
+				data:{
+					show:true
+				},
+				methods:{
+					showsome(){
+						this.show = !this.show
+					},
+					beforenter(el){
+						el.style.opacity = 0
+//						el.style.color = 'red'
+					},
+					enter(el,done){
+						Velocity(el,{opacity:1},{duration:1000,complete:done})
+//						setTimeout(function(){
+//							el.style.color = 'green'
+//						},2000)
+//						setTimeout(function(){
+//							done()
+//						},6000)
+					},
+					afterenter(el){
+						console.log('动画结束')
+//						el.style.color = '#000'
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
