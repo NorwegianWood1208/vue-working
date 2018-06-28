@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../vue.js" ></script>
+		<style>
+			.v-enter{
+				opacity: 0;
+			}
+			.v-enter{
+				transition: opacity 1s;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="root">
+			<transition-group>
+				<div v-for="value in list" :key="value.id">
+					{{value.title}}
+				</div>				
+			</transition-group>
+			<button @click="showsome">点我</button>
+		</div>
+		
+		<script src="velocity.js"></script>
+		<script>
+			var count = 0
+			let root = new Vue({
+				el:'#root',
+				data:{
+					show:true,
+					list:[]
+				},
+				methods:{
+					showsome(){
+						this.list.push({
+							id:count++,
+							title:'hello,world'
+						})
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
